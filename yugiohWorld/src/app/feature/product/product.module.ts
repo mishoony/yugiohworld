@@ -17,7 +17,8 @@ import { ProductListItemComponent } from './product-list-item/product-list-item.
   imports: [
     CommonModule
   ],
-  exports:[ GalleryComponent,
+  exports:[ 
+    GalleryComponent,
     DetailsComponent,
     CrateProductComponent,
     ProductListItemComponent]

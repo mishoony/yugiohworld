@@ -32,9 +32,11 @@
     font-size: 20px;
     font-family: 'Play', sans-serif;
 }
-.navigation_bar__links li{
+.navigation_bar__links a{
+    color: inherit;
+}
+.navigation_bar__links a li{
     padding: 5px;
-    
     border-radius: 8px;
 }
 .navigation_bar__links li:hover{
@@ -96,6 +98,9 @@
     color: #fe7e03;
     font-family: 'Abel', sans-serif;
     font-weight: bold;
+}
+.mainSection__navigation__links a{
+    color: inherit;
 }
 
 .mainSection__navigation__links:hover{
