@@ -1,0 +1,115 @@
+.navigation_logo{
+    max-width: 100px;
+    transition: 1.5s;
+    
+}
+
+.navigation_logo_test{
+    max-width: 15%;
+}
+
+.navigation_logo:hover{
+    max-width: 200px;
+    
+}
+
+.navigation_bar{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    /* margin-top: 1.5rem; */
+    background-color: #384850;
+    padding: 0.5rem;
+    font-size: 17px;
+    align-items: center;
+}
+
+.navigation_bar__links{
+    display: flex;
+    gap: 1.2rem;
+    margin-right:15px;
+    color: #fe7e03;
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+}
+.navigation_bar__links li{
+    padding: 5px;
+    
+    border-radius: 8px;
+}
+.navigation_bar__links li:hover{
+    /* border: 2px solid #fe7e03; */
+    background-color: #fe7e03;
+    color: #263238;
+}
+
+
+.img_section{
+    display: flex;
+    background-image: url(/assets/img/header.jpg);
+    height: 8vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search{
+    /* font-size: 500px; */
+    min-width: 50px;
+    color: rgb(229, 238, 238);
+}
+
+.img_section__title{
+    font-size: 20px;
+    color: aquamarine;
+    position: absolute;
+    
+}
+.mainSection__navigation__cont{
+    display: flex;
+    align-items:flex-end;
+    margin-left: auto;
+}
+.empty{
+    min-width: 20vw;
+}
+
+.mainSection__navigation__link{
+    display: flex;
+    /* gap: 5rem; */
+    padding: 5px;
+    align-items:flex-end;
+    /* background-color: rgb(80, 78, 78); */
+    background-color:  #263238;
+    /* background-color: #8a55ff */
+     /* margin-right: 10px; */
+     
+    
+    
+}
+
+.mainSection__navigation__links{
+    /* border: 2px solid black; */
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #fe7e03;
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+}
+
+.mainSection__navigation__links:hover{
+    /* border: 2px solid #fe7e03; */
+    background-color: #fe7e03;
+    color: #263238;
+}
+
+.mainSection__navigation__links:nth-child(1){
+    margin-left: auto;
+   
+}
+.logo{
+    max-width: 20%;
+    /* transform: translateX(10px) rotate(10deg) translateY(5px); */
+   
+ }

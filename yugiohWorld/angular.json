@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/reset_css.css"
             ],
             "scripts": []
           },
