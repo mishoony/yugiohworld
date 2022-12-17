@@ -8,6 +8,11 @@ import { GalleryComponent } from './feature/product/gallery/gallery.component';
 
 const routes: Routes = [
   {
+    path: "",
+    redirectTo:'home',
+    pathMatch:'full'
+  },
+  {
     path: 'home',
     component: HomeComponent
   },

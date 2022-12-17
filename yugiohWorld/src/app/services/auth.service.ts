@@ -1,24 +1,53 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { IUser } from '../interface/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor( private http:HttpClient ) { }
+  constructor( private http:HttpClient, private router:Router) { }
 
+  user:IUser| null = null
 
-  register(){
-
-    const user ={
-      "name":"John Doe",
-      "email":"john@email.com",
-      "username":"Johny",
-      "password":"12345",
-      "rePassword":"12345"
+  get isLoggedIn(){
+    return this.user !== null
   }
-  console.log(user)
-    this.http.post('https://localhost:3000/api/users/register',user)
+
+
+  register(username:string , password:string, email:string){
+
+    this.login(password,username)
+
+    
   }
+  
+    // return this.http.post('http://localhost:3000/auth/register',{username , password, email},{
+    //   headers:{
+    //     "Access-Control-Allow-Origin": "http://localhost:4200",
+        
+    //   }
+    // })}
+
+
+  login(password:string,username:string){
+
+    this.user = {password,username}
+
+    this.router.navigate(['/'])
+
+    // return this.http.post('https://reqres.in/api/login',{email,password})
+  }
+  logout(){
+
+    this.user = null
+
+    this.router.navigate(['/'])
+
+    // return this.http.post('https://reqres.in/api/login',{email,password})
+  }
+
+
 }

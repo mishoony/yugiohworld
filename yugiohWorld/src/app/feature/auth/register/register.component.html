@@ -2,17 +2,25 @@
     <main class="mainSection">
         <div class="accaount">
            
-            <form  class="accaount__form" action="">
+            <form #form="ngForm"  (ngSubmit)="onSubmit(form)" class="accaount__form" >
                 <h2>Register</h2>
+
                 <label for="username">Username</label>
-                <input type="text" id="username">
+                <input ngModel name="username" type="text" id="username">
+
+
                 <label for="email">Email</label>
-                <input type="text" id="email">
+                <input type="text" ngModel name="email" id="email">
+
+
                 <label for="password">Password</label>
-                <input type="text" id="password">
+                <input ngModel type="text" name="password" id="password">
+
+
                 <label for="Re-Password">Re-Password</label>
-                <input type="text" id="Re-Password">
-                <button  (ngClic)="onSubmit()" class="submit_btn" >Register</button>
+                <input type="text" ngModel name="rePassword" id="Re-Password">
+
+                <button class="submit_btn" >Register</button>
             </form>
             
         </div>

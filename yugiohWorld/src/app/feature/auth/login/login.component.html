@@ -1,15 +1,15 @@
 <main class="mainSection">
     <div class="accaount">
        
-        <form class="accaount__form" action="">
+        <form #form="ngForm" class="accaount__form" (ngSubmit)="onSubmite(form)">
             <h2>Login</h2>
             <label for="username">Username</label>
-            <input type="text" id="username">
+            <input ngModel type="text" name="username" id="username">
             
             <label for="password">Password</label>
-            <input type="text" id="password">
+            <input ngModel name="password" type="text" id="password">
             
-            <button class="submit_btn" type="submit">Login</button>
+            <button class="submit_btn">Login</button>
         </form>
         
     </div>

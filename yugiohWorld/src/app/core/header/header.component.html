@@ -7,8 +7,23 @@
         <ul class="navigation_bar__links">
             <!-- <li>my profil</li> -->
             <!-- <li>logout</li> -->
-            <a routerLink="/auth/login"><li>login</li></a>
-            <a routerLink="/auth/register"><li>Register</li></a>
+            <ng-template #LoggedIn>
+                <a routerLink="/auth/myProfil">
+                    <li>my profil</li>
+                </a>
+                <a routerLink="/auth/logout">
+                    <li>logout</li>
+                </a>
+            </ng-template>
+            <ng-template #loggedOut>
+                <a routerLink="/auth/login">
+                    <li>login</li>
+                </a>
+                <a routerLink="/auth/register">
+                    <li>Register</li>
+                </a>
+            </ng-template>
+            <ng-container *ngTemplateOutlet="isLoggedIn?LoggedIn:loggedOut "></ng-container>
         </ul>
     </nav>
     <div class="img_section">
@@ -27,7 +42,10 @@
             <li class="mainSection__navigation__links"><a routerLink="/home">home</a></li>
             <li class="mainSection__navigation__links"><a routerLink="/allProducts">products</a></li>
             <li class="mainSection__navigation__links"><a routerLink="/aboutAs">about as</a></li>
-            <li class="mainSection__navigation__links"><a routerLink="/createProduct">Create Product</a></li>
+            <ng-component *ngIf="isAdmin">
+                <li class="mainSection__navigation__links"><a routerLink="/createProduct">Create Product</a></li>
+            </ng-component>
+            
         </ul>
     </div>
 </header>

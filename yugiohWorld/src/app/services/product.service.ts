@@ -14,6 +14,17 @@ export class ProductService {
     return allCards
   }
 
+  getNewCards(){
+
+    return this.http.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?level=4&attribute=water&sort=atk')
+  }
+
+  getUpcomingproduct(){
+
+      const upComingCards = this.http.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Blue-Eyes')
+      return upComingCards
+  }
+
   
 
 }

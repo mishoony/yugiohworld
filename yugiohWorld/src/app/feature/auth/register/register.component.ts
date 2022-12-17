@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import {  Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -6,16 +8,26 @@ import { AuthService } from 'src/app/services/auth.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
+  @ViewChild(
+    NgForm,
+    { static: true }
+  )
+  form!: ElementRef<HTMLInputElement>
 
-  constructor(private authService:AuthService) { }
+  constructor(private router:Router,private authService: AuthService) { }
 
-  ngOnInit(): void {
-  }
 
-  onSubmit(){
+  onSubmit(form: NgForm): void {
 
-      this.authService.register()
+    const { username, password, email } = form.value
+
+    console.log(username, password, email)
+
+
+    this.authService.register(username, password, email)
+
+    
   }
 
 }
