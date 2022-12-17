@@ -19,26 +19,21 @@ export class AuthService {
 
   register(username:string , password:string, email:string){
 
-    this.login(password,username)
+  //   this.login(password,username)
 
     
-  }
+  // }
+
   
-    // return this.http.post('http://localhost:3000/auth/register',{username , password, email},{
-    //   headers:{
-    //     "Access-Control-Allow-Origin": "http://localhost:4200",
-        
-    //   }
-    // })}
+    return this.http.post('http://localhost:3000/api/register',{username , password, email})}
 
 
   login(password:string,username:string){
 
-    this.user = {password,username}
-
-    this.router.navigate(['/'])
-
-    // return this.http.post('https://reqres.in/api/login',{email,password})
+    
+    
+    
+    return this.http.post<any>('http://localhost:3000/api/login',{username,password})
   }
   logout(){
 

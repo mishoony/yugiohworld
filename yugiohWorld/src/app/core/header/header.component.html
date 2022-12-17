@@ -42,9 +42,9 @@
             <li class="mainSection__navigation__links"><a routerLink="/home">home</a></li>
             <li class="mainSection__navigation__links"><a routerLink="/allProducts">products</a></li>
             <li class="mainSection__navigation__links"><a routerLink="/aboutAs">about as</a></li>
-            <ng-component *ngIf="isAdmin">
+            <ng-container *ngIf="isAdmin">
                 <li class="mainSection__navigation__links"><a routerLink="/createProduct">Create Product</a></li>
-            </ng-component>
+            </ng-container>
             
         </ul>
     </div>

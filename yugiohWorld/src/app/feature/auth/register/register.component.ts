@@ -25,7 +25,10 @@ export class RegisterComponent {
     console.log(username, password, email)
 
 
-    this.authService.register(username, password, email)
+    this.authService.register(username, password, email).subscribe((value)=>{
+
+      console.log("sucsses")
+    })
 
     
   }

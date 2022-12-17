@@ -11,8 +11,8 @@ export class AppInterceptro implements HttpInterceptor{
 
     constructor(){}
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        if(req.url.startsWith('/auth')){
-            req = req.clone({url:req.url.replace('/auth',environment.apiUrl)})
+        if(req.url.startsWith('/api')){
+            req = req.clone({url:req.url.replace('/api',environment.apiUrl)})
         }
         
         
