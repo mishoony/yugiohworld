@@ -20,6 +20,9 @@ export class LoginComponent implements OnInit {
     const { password, username } = form.value
 
     this.authService.login(password!, username!).subscribe(user => {
+
+
+      console.log(user)
       this.authService.user =user
 
       this.router.navigate(['/'])

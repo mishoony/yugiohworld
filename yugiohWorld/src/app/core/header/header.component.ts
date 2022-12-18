@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   }
 
   get isAdmin(){
-    return this.authService.user?._id
+    return this.authService.user?.isAdmin
   }
 
   ngOnInit(): void {

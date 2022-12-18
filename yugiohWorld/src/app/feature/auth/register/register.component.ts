@@ -25,9 +25,11 @@ export class RegisterComponent {
     console.log(username, password, email)
 
 
-    this.authService.register(username, password, email).subscribe((value)=>{
+    this.authService.register(username, password, email).subscribe(user=>{
 
-      console.log("sucsses")
+      this.authService.user =user
+
+      this.router.navigate(['/'])
     })
 
     

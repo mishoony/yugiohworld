@@ -8,7 +8,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class HomeComponent implements OnInit {
 
-  allProduct =[] as any
+  
   cominUp = [] as any
   newCard = [] as any
   constructor(private productService: ProductService) { }
@@ -27,6 +27,10 @@ export class HomeComponent implements OnInit {
 
       this.newCard = value
       this.newCard = this.newCard.data.slice(0,5+1)
+      for (let i = 0 ; i < this.newCard.length ; i++ ){
+
+        console.log(this.newCard[i].card_images[0].image_url)
+      }
     })
 
     // this.productService.getAllProduct().subscribe((value)=>{
@@ -37,10 +41,7 @@ export class HomeComponent implements OnInit {
 
     //   console.log(this.allProduct)
 
-    //   for (let i = 0 ; i < this.allProduct.length ; i++ ){
-
-    //     console.log(this.allProduct[i].card_images[0].image_url)
-    //   }
+      
       
     // })
   }

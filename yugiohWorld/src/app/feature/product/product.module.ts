@@ -4,6 +4,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { DetailsComponent } from './details/details.component';
 import { CrateProductComponent } from './crate-product/crate-product.component';
 import { ProductListItemComponent } from './product-list-item/product-list-item.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { ProductListItemComponent } from './product-list-item/product-list-item.
     ProductListItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports:[ 
     GalleryComponent,

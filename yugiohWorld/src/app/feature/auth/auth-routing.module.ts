@@ -19,7 +19,8 @@ const routes : Routes = [
     },
     {
         path: 'auth/logout',
-        component: LogoutComponent
+        component:LogoutComponent
+        
     }
 ]
 

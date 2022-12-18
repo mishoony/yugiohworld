@@ -25,7 +25,7 @@ export class AuthService {
   // }
 
   
-    return this.http.post('http://localhost:3000/api/register',{username , password, email})}
+    return this.http.post<IUser>('http://localhost:3000/api/register',{username , password, email})}
 
 
   login(password:string,username:string){
@@ -33,15 +33,20 @@ export class AuthService {
     
     
     
-    return this.http.post<any>('http://localhost:3000/api/login',{username,password})
+    return this.http.post<IUser>('http://localhost:3000/api/login',{username,password})
   }
   logout(){
 
-    this.user = null
+    return this.http.post('http://localhost:3000/api/logout',{})
 
     this.router.navigate(['/'])
 
-    // return this.http.post('https://reqres.in/api/login',{email,password})
+    
+  }
+
+  getProfile(){
+
+    return this.http.get<IUser>('http://localhost:3000/api/users/profile')
   }
 
 

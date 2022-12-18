@@ -1,21 +1,22 @@
 <main class="mainSection">
     <div class="accaount">
         <h2>Create Product</h2>
-        <form class="card__form" action="">
+        <form #form="ngForm"  class="card__form" (ngSubmit)="onSubmit(form)">
+
             <label for="nameProduct">Name of product</label>
-            <input type="text" id="nameProduct">
+            <input type="text" ngModel name="productName" id="nameProduct">
 
             <label for="productDescription">Product Description</label>
-            <textarea name="productDescription" id="productDescription" cols="25" rows="5"></textarea>
+            <textarea name="description" ngModel id="productDescription" cols="25" rows="5"></textarea>
 
             <label for="price">Price of product</label>
-            <input type="text" id="price">
+            <input type="text" name="priceOfProduct" ngModel id="price">
 
             <label for="imgUrl">Img File</label>
-            <input type="file" id="imgUrl" accept="image/*">
+            <input type="text" name="imgUrl" ngModel id="imgUrl" accept="image/*">
 
             <label for="typeOfProduct">Type of Product</label>
-            <select name="typeOfProduct" id="typeOfProduct"> 
+            <select name="typeProduct" ngModel id="typeOfProduct"> 
                 <option value="map">Map</option>
                 <option value="card">Card</option>
                 <option value="others">Others</option>
@@ -23,8 +24,8 @@
 
             
 
-            <label for="typeOfPost">Type of Post</label>
-            <select name="typeOfPost" id="typeOfPost"> 
+            <label for="typePost">Type of Post</label>
+            <select name="typePost" ngModel id="typeOfPost"> 
                 <option value="Upcoming">Upcoming</option>
                 <option value="ForSeal">For seal</option>
                 
